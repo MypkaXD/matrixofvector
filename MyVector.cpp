@@ -1,9 +1,10 @@
-﻿#include"Vector.h"
+#include"Vector.h"
 #include <iostream>
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
+    /*
     MyVector a(5);
     a[0] = 1;
     a[1] = 2;
@@ -18,7 +19,7 @@ int main()
     b[4] = 1;
 
     std::cout << "\ta = " << a << "\n\tb = " << b << std::endl;
-    std::cout << "---------------------------"<<std::endl;
+    std::cout << "---------------------------" << std::endl;
 
     std::cout << "a + b = " << a + b << std::endl;
     std::cout << "a - b = " << a - b << std::endl;
@@ -27,7 +28,22 @@ int main()
 
     b *= 3;
     std::cout << "b * 3 = " << b << std::endl;
+    */
+    Vector vector;
+    std::cout<< "Введите количество элементов в векторе" << std::endl;
+    int valueOfVector;
+    std::cin >> valueOfVector;
+    vector.setValue(valueOfVector);
+    vector.mallocMemoryForVector();
+    vector.setVector();
+    vector.printVector();
+    vector.deleteMemoryForVector();
 
-
+    Matrix matrix;
+    int numberOfVector;
+    std::cout << "Введите количество векторов" << std::endl;
+    std::cin >> numberOfVector;
+    
+    matrix.setValue(valueOfVector, numberOfVector);
 }
 
